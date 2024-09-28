@@ -1,0 +1,38 @@
+nav{
+    background-color: steelblue;
+    padding: 10px;
+}
+nav a  {
+    color:white ;
+    display: block;
+    padding: 20px;
+}
+h1{
+    color: steelblue;
+}
+img{
+    width: 150px;
+    height: auto;
+    border: 1x solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0  30px  gray ;
+}
+p{
+    padding: 10px;
+}
+
+aside img{
+    width: 150px;
+    height: auto;
+    padding:5px;
+}
+aside{
+    background-color: #5993c2;
+    color: #fff;
+}
+
+footer{
+    margin-top: 15px;
+    border-top:1px solid #000;
+    text-align: center;
+}
