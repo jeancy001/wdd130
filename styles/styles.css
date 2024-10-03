@@ -1,9 +1,17 @@
+:root{
+    --heading-backroung-color: steelblue;
+    --content-height:auto;
+    --content-color:#fff;
+}
+main {
+    max-width: 840px;
+}
 nav{
-    background-color: steelblue;
+    background-color:var(--heading-backroung-color);
     padding: 10px;
 }
 nav a  {
-    color:white ;
+    color:var(--content-color) ;
     display: block;
     padding: 20px;
 }
@@ -12,27 +20,34 @@ h1{
 }
 img{
     width: 150px;
-    height: auto;
-    border: 1x solid steelblue;
+    height:var(--content-height);
+    border: 1x solid var(--heading-backroung-color);
     padding: 2px;
     box-shadow: 0 0  30px  gray ;
 }
 p{
-    padding: 10px;
+    padding: 0;
 }
 
 aside img{
-    width: 150px;
-    height: auto;
-    padding:5px;
+        width: 200px;
+        height: var(--content-height);
+
+      
 }
-aside{
-    background-color: #5993c2;
-    color: #fff;
-}
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* 1️⃣ */
+    padding: 1rem;
+    background-color:var(--heading-backroung-color);
+    color: #333;
+    text-align: center;
+  }
 
 footer{
     margin-top: 15px;
     border-top:1px solid #000;
     text-align: center;
+
 }
