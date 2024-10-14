@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Contact page for rafting trips and inquiries.">
+    <meta name="author" content="Jeancy Mpoyi">
+    <link rel="stylesheet" href="styles/rafting.css">
+
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Rafting Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Company Information -->
+        <section id="company-info">
+            <h3>Contact Us</h3>
+            <p><strong>Address:</strong> 2201 Road Rd, Nairobi City, N 19</p>
+            <p><strong>Phone:</strong> +254743303216</p>
+            <p><strong>Email:</strong> jeancympoy242gmail.com</p>
+            
+            <!-- Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.32390057508!2d36.682580004205285!3d-1.3032035599611562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1728896904136!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <!-- Employee Profiles -->
+         <div class="employee-profiles-head">
+            <h2>Meet Our Team</h2>
+         </div>
+        <section id="employee-profiles">
+          
+            <div class="employee">
+                <img src="images/jeancy.jpg" alt="Employee 1">
+                <p><strong>Jeancy</strong> - Customer Service</p>
+            </div>
+            <div class="employee">
+                <img src="images/jeancy.jpg" alt="Employee 2">
+                <p><strong>Jeancy Smith</strong> - Trip Coordinator</p>
+            </div>
+            <div class="employee">
+                <img src="images/jeancy.jpg" alt="Employee 3">
+                <p><strong>Johnson</strong> - Reservations Manager</p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <p>Purpose of the Message:</p>
+                <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
+                <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <label>
+                    <input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit">Submit Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2024 JeancyTech. All rights reserved.</p>
+        <nav class="sociallinks">
+            <a href="https://facebook.com">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>
