@@ -1,21 +1,33 @@
-:root{
-    --primary-color:#4f7df2;
-    --secondary-color:#3c415f;
-    --accent1-color:#82b094;
+:root {
+    --primary-color: #4f7df2;
+    --secondary-color: #3c415f;
+    --accent1-color: #82b094;
     --accent2-color: #C5D6D5;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+/* Header Styles */
 header {
     display: grid;
     grid-template-columns: 1fr auto; 
     align-items: center; 
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: var(--secondary-color);
 }
 
-/* Logo styling */
 header img {
-    max-height: 60px; /
+    max-height: 60px;
 }
 
 nav {
@@ -25,90 +37,102 @@ nav {
 
 nav a {
     text-decoration: none; 
-    color: #007bff; 
+    color: #fff; 
     font-weight: bold; 
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #0056b3; 
+    color: var(--accent1-color); 
 }
 
-*{
-    margin:1px;
-    padding:1px;
-    
+/* Hero Section */
+.hero {
+    position: relative;
 }
-h1,h2{
-    text-align:left;
-    font-size: 28;
-    font-weight: bold;
-    color: var(--primary-color);
 
-}
- h1{
-  position:absolute;
-    background-color: var(--secondary-color);
-    color: #fff;
-    width:95%;
-    top:30px;
-    padding:10px;
-    text-align: center;
-    left:0;
-
-   
-}
-.sociallinks a{
-    text-decoration: none;
-    bottom: 0%;
-    
-
-}
 .hero img {
     display: block;
     width: 100%;
     height: auto;
 }
-.hero {
-    position: relative;
+
+.hero h1 {
+    position: absolute;
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 100%;
+    top: 30px;
+    padding: 10px;
+    text-align: center;
 }
+article{
+    text-align: center;
+}
+section{
+    text-align: center;
+}
+section>p{
+    font-size: 18px;
+
+}
+input[type="checkbox"]:checked:required {
+    outline: 2px solid #50e243;
+}
+
+input[type="checkbox"]:invalid:checked {
+    outline: 2px solid red;
+}
+
+
+/* Article Styles */
 article {
-display: flex;
-flex-direction: row;
-align-items: center;
-top: 90px;
-position:absolute;
-padding: 30px;
-background-color: var(--primary-color);
-margin-left: 10px;
-
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--primary-color);
+    margin: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-section p {
-    text-align:left;
-    font-size:18px;
-}
-article  img {
+
+article img {
     float: right;
-    width:100px;
-    height:auto;
-    
-
+    width: 100px;
+    height: auto;
 }
+
 article p {
     float: left;
+    margin-left: 20px;
+    font-size: 1.1em;
 }
 
-nav img {
-    position: relative;
-    width:100px;
+/* Section Styles */
+section {
+    margin: 20px;
 }
 
+section h2 {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+section p {
+    text-align: left;
+    font-size: 18px;
+}
+
+/* Adventures Section */
 .adventures {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 10px; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px; 
     padding: 20px;
 }
+
 .adventures img {
     width: 100%; 
     border-radius: 5px; 
@@ -118,38 +142,25 @@ nav img {
     margin: 0; 
 }
 
-.adventures img {
-    width: 100%; 
-    border-radius: 5px; 
-}
-
 .adventures figcaption {
     text-align: center; 
     margin-top: 5px; 
     font-weight: bold; 
-
-
 }
 
-
-
-
-
-
+/* Footer Styles */
 footer {
     display: flex; 
-    justify-content: flex-end; 
+    justify-content: space-between; 
     padding: 20px;
+    background-color: var(--secondary-color);
+    color: #fff;
 }
 
 footer img {
     max-height: 30px;
     margin-left: 10px; 
 }
-
-
-
-
 
 /* Company Info Styles */
 #company-info {
@@ -233,7 +244,7 @@ footer img {
 
 #contact-form button {
     padding: 10px;
-    background-color: #0073e6;
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -245,4 +256,112 @@ footer img {
     background-color: #005bb5;
 }
 
-/* Footer Styles */
+/* Input Validation Styles */
+input:invalid {
+    border: 2px dashed red;
+}
+
+input:invalid:required {
+    background-image: linear-gradient(to right, #d39ba4, #f5937b);
+}
+.cta-section{
+    text-align: center;
+  
+  
+
+}
+.cta-section >a{
+    background-color: #24d49a;
+    padding:20px;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.cta-section >a:hover{
+    background-color: #10996b;
+}
+.call-to-action{
+    text-align: center;
+}
+.call-to-action>a{
+    background-color: #24d49a;
+    padding:20px;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;  
+}
+.call-to-action>a:hover{
+    background-color: #10996b;
+}
+.trip >img{
+    padding:5px;
+    margin: 20px;
+}
+input:valid {
+    border: 2px solid #24d49a;
+}
+input{
+padding:20px;
+margin: 10px;
+border-radius: 8px;
+}
+/* Newsletter Section */
+.newsletter {
+    background-color: #f4f4f4;
+    padding: 2em;
+    text-align: center;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 400px;
+}
+
+.newsletter-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.newsletter-form button:hover {
+    background-color: #0056b3;
+}
+
+/* About Section with Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2em;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item p {
+    text-align: center;
+}
+
+.trip-table {
+    margin: 20px;
+    overflow-x: auto; /* Allows horizontal scroll on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
